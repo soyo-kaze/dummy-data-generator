@@ -1,0 +1,19 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  border-left: 1px solid black;
+}
+
+.main-containter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.data-container {
+  padding: 32px;
+}
