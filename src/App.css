@@ -15,5 +15,6 @@
 }
 
 .data-container {
-  padding: 32px;
+  padding: 24px;
+  width: 100%;
 }
