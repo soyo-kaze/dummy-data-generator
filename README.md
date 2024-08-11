@@ -1,11 +1,16 @@
-# React + TypeScript + Vite
+# D-generate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Every wanted dummy data to test your applications?
 
-Currently, two official plugins are available:
+I present to you `D-generate`, provide your data schema or just a description and how much of that data you want to generate. D-generate will generate all that with ease using state of the art LLM by google that is `Gemini`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Future development
+
+- [ ] Landing website
+- [ ] Download data as file csv or json
+- [ ] npx command.
+- [ ] Support to use your gemini api key.
+- [ ] integration with databases to directly fill data into them.
 
 ## Expanding the ESLint configuration
 
@@ -17,12 +22,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
