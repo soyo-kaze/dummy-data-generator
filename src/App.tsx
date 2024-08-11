@@ -46,7 +46,7 @@ const App = () => {
   return (
     <>
       <header>
-        <Typography variant="h4">F.AI.ker</Typography>
+        <Typography variant="h4">D-generate</Typography>
       </header>
       <div className="main-containter">
         <div className="data-container">
