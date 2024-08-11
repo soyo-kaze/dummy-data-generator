@@ -110,9 +110,20 @@ const App = () => {
             onClick={() => getPrompt(typeInterface, dataLength, fileType)}
             variant="contained"
             fullWidth
-            disabled={!typeInterface}
+            disabled={!typeInterface || loading}
           >
-            Generate
+            {loading ? "🔃" : "Generate"}
+          </Button>
+          <Button
+            onClick={() => {
+              setData("");
+              setTypeInterface("");
+            }}
+            variant="contained"
+            fullWidth
+            disabled={!data}
+          >
+            Reset
           </Button>
         </div>
       </div>
