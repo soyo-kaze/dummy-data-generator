@@ -25,20 +25,20 @@ const App = () => {
     async (typeInterface: string, dataLength: string, fileType: string) => {
       const prompt = `generate a list of object in ${fileType} with dummy data as per the type interface: \n \`\`\`json ${typeInterface}  \`\`\` \n no description just the dummy data of length ${dataLength} given that it's shown as plain text strictly without triple backticks language tags as I want only the code formatted with newlines and well indented where tab is 4`;
       const result = await genAI
-        .getGenerativeModel({ model: "gemini-1.5-flash" })
+        .getGenerativeModel({ model: "gemini-2.5-flash" })
         .generateContent(prompt);
       const response = result.response.text().split("/n").join("");
       console.log(response, result.response.text());
       setData(response);
     },
-    []
+    [],
   );
 
   if (!import.meta.env.VITE_GOOGLE_GEMINI_API_KEY)
     throw Error("No Gemini api key found!!");
 
   const genAI = new GoogleGenerativeAI(
-    import.meta.env.VITE_GOOGLE_GEMINI_API_KEY
+    import.meta.env.VITE_GOOGLE_GEMINI_API_KEY,
   );
 
   const OBJECT_TYPES = ["CSV", "JavaScript", "JSON"];
